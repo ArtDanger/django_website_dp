@@ -8,11 +8,15 @@ from telebot.sendmessage import sendTelegram
 
 # Create your views here.
 def first_page(request):
+    # cms
     slider_list = CmsSlider.objects.all()
+    # price box
     pc_1 = PriceCard.objects.filter(type_price='gold').get()
     pc_2 = PriceCard.objects.filter(type_price='silver').get()
     pc_3 = PriceCard.objects.filter(type_price='bronze').get()
+    # price table
     price_table = PriceTable.objects.all()
+    # from forms.py
     form = OrderForm()
     dict_obj = {'slider_list': slider_list,
                 'pc_1': pc_1,
