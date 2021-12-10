@@ -210,3 +210,6 @@ ENV/
 
 # mkdocs documentation
 /site
+
+#my secret key
+secret_settings.py
